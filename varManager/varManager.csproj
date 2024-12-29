@@ -64,6 +64,9 @@
     <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DgvFilterPopup">
+      <HintPath>..\DgvFilterPopup.dll</HintPath>
+    </Reference>
     <Reference Include="System">
       <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\System.dll</HintPath>
     </Reference>
@@ -302,10 +305,6 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\DgvFilterPopup\DgvFilterPopup\DgvFilterPopup.csproj">
-      <Project>{4b9be5fd-303e-4270-9c4d-fa3bde6c34eb}</Project>
-      <Name>DgvFilterPopup</Name>
-    </ProjectReference>
     <ProjectReference Include="..\DragNDrop\DragNDrop.csproj">
       <Project>{c7e21f05-c166-4dcc-8429-ec8a4c1a67b6}</Project>
       <Name>DragNDrop</Name>
