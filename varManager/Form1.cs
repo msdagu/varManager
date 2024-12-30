@@ -836,6 +836,7 @@ namespace varManager
                     }
                     varsrow = varManagerDataSet.vars.NewvarsRow();
                     varsrow.varName = basename;
+                    varsrow.insertDate = DateTime.Now;
                     
                     string[] varnamepart = basename.Split('.');
                     if (varnamepart.Length == 3)
