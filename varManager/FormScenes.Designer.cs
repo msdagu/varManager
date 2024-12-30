@@ -101,6 +101,8 @@ namespace varManager
             this.scenesTableAdapter = new varManager.varManagerDataSetTableAdapters.scenesTableAdapter();
             this.installStatusTableAdapter = new varManager.varManagerDataSetTableAdapters.installStatusTableAdapter();
             this.varsTableAdapter = new varManager.varManagerDataSetTableAdapters.varsTableAdapter();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -121,6 +123,7 @@ namespace varManager
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPreview)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.varManagerDataSet)).BeginInit();
+            this.groupBox7.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -131,7 +134,7 @@ namespace varManager
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 55F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 232F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 233F));
             this.tableLayoutPanel1.Controls.Add(this.panel5, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.panel6, 3, 1);
             this.tableLayoutPanel1.Controls.Add(this.listViewHide, 0, 1);
@@ -190,7 +193,7 @@ namespace varManager
             this.panel6.Controls.Add(this.buttonAddFav);
             this.panel6.Controls.Add(this.buttonRemoveFav);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel6.Location = new System.Drawing.Point(712, 43);
+            this.panel6.Location = new System.Drawing.Point(711, 43);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(49, 590);
             this.panel6.TabIndex = 5;
@@ -256,7 +259,7 @@ namespace varManager
             this.listViewNormal.LineColor = System.Drawing.Color.Red;
             this.listViewNormal.Location = new System.Drawing.Point(385, 43);
             this.listViewNormal.Name = "listViewNormal";
-            this.listViewNormal.Size = new System.Drawing.Size(321, 590);
+            this.listViewNormal.Size = new System.Drawing.Size(320, 590);
             this.listViewNormal.TabIndex = 7;
             this.listViewNormal.UseCompatibleStateImageBehavior = false;
             this.listViewNormal.VirtualMode = true;
@@ -273,9 +276,9 @@ namespace varManager
             this.listViewFav.HideSelection = false;
             this.listViewFav.LargeImageList = this.imageListScenes;
             this.listViewFav.LineColor = System.Drawing.Color.Red;
-            this.listViewFav.Location = new System.Drawing.Point(767, 43);
+            this.listViewFav.Location = new System.Drawing.Point(766, 43);
             this.listViewFav.Name = "listViewFav";
-            this.listViewFav.Size = new System.Drawing.Size(321, 590);
+            this.listViewFav.Size = new System.Drawing.Size(320, 590);
             this.listViewFav.TabIndex = 7;
             this.listViewFav.UseCompatibleStateImageBehavior = false;
             this.listViewFav.VirtualMode = true;
@@ -290,7 +293,7 @@ namespace varManager
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(385, 3);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(321, 34);
+            this.panel3.Size = new System.Drawing.Size(320, 34);
             this.panel3.TabIndex = 10;
             // 
             // buttonNormal
@@ -310,7 +313,7 @@ namespace varManager
             this.labelNormal.AutoSize = true;
             this.labelNormal.Location = new System.Drawing.Point(191, 10);
             this.labelNormal.Name = "labelNormal";
-            this.labelNormal.Size = new System.Drawing.Size(16, 17);
+            this.labelNormal.Size = new System.Drawing.Size(20, 21);
             this.labelNormal.TabIndex = 6;
             this.labelNormal.Text = "0";
             // 
@@ -319,15 +322,15 @@ namespace varManager
             this.panel4.Controls.Add(this.buttonFav);
             this.panel4.Controls.Add(this.labelFav);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(767, 3);
+            this.panel4.Location = new System.Drawing.Point(766, 3);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(321, 34);
+            this.panel4.Size = new System.Drawing.Size(320, 34);
             this.panel4.TabIndex = 10;
             // 
             // buttonFav
             // 
             this.buttonFav.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.buttonFav.Location = new System.Drawing.Point(227, 5);
+            this.buttonFav.Location = new System.Drawing.Point(226, 5);
             this.buttonFav.Name = "buttonFav";
             this.buttonFav.Size = new System.Drawing.Size(91, 26);
             this.buttonFav.TabIndex = 0;
@@ -339,9 +342,9 @@ namespace varManager
             // 
             this.labelFav.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.labelFav.AutoSize = true;
-            this.labelFav.Location = new System.Drawing.Point(180, 10);
+            this.labelFav.Location = new System.Drawing.Point(179, 10);
             this.labelFav.Name = "labelFav";
-            this.labelFav.Size = new System.Drawing.Size(16, 17);
+            this.labelFav.Size = new System.Drawing.Size(20, 21);
             this.labelFav.TabIndex = 6;
             this.labelFav.Text = "0";
             // 
@@ -372,7 +375,7 @@ namespace varManager
             this.labelHide.AutoSize = true;
             this.labelHide.Location = new System.Drawing.Point(100, 10);
             this.labelHide.Name = "labelHide";
-            this.labelHide.Size = new System.Drawing.Size(16, 17);
+            this.labelHide.Size = new System.Drawing.Size(20, 21);
             this.labelHide.TabIndex = 6;
             this.labelHide.Text = "0";
             // 
@@ -384,11 +387,12 @@ namespace varManager
             this.flowLayoutPanel1.Controls.Add(this.groupBox4);
             this.flowLayoutPanel1.Controls.Add(this.groupBox5);
             this.flowLayoutPanel1.Controls.Add(this.groupBox6);
+            this.flowLayoutPanel1.Controls.Add(this.groupBox7);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(1094, 3);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(1092, 3);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.tableLayoutPanel1.SetRowSpan(this.flowLayoutPanel1, 2);
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(227, 630);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(229, 630);
             this.flowLayoutPanel1.TabIndex = 8;
             // 
             // groupBox3
@@ -412,7 +416,7 @@ namespace varManager
             this.radioButtonCategory4.AutoSize = true;
             this.radioButtonCategory4.Location = new System.Drawing.Point(7, 102);
             this.radioButtonCategory4.Name = "radioButtonCategory4";
-            this.radioButtonCategory4.Size = new System.Drawing.Size(84, 21);
+            this.radioButtonCategory4.Size = new System.Drawing.Size(103, 25);
             this.radioButtonCategory4.TabIndex = 2;
             this.radioButtonCategory4.Text = "hairstyle";
             this.radioButtonCategory4.UseVisualStyleBackColor = true;
@@ -423,7 +427,7 @@ namespace varManager
             this.radioButtonCategory6.AutoSize = true;
             this.radioButtonCategory6.Location = new System.Drawing.Point(93, 50);
             this.radioButtonCategory6.Name = "radioButtonCategory6";
-            this.radioButtonCategory6.Size = new System.Drawing.Size(55, 21);
+            this.radioButtonCategory6.Size = new System.Drawing.Size(67, 25);
             this.radioButtonCategory6.TabIndex = 2;
             this.radioButtonCategory6.Text = "skin";
             this.radioButtonCategory6.UseVisualStyleBackColor = true;
@@ -434,7 +438,7 @@ namespace varManager
             this.radioButtonCategory2.AutoSize = true;
             this.radioButtonCategory2.Location = new System.Drawing.Point(7, 50);
             this.radioButtonCategory2.Name = "radioButtonCategory2";
-            this.radioButtonCategory2.Size = new System.Drawing.Size(63, 21);
+            this.radioButtonCategory2.Size = new System.Drawing.Size(77, 25);
             this.radioButtonCategory2.TabIndex = 2;
             this.radioButtonCategory2.Text = "looks";
             this.radioButtonCategory2.UseVisualStyleBackColor = true;
@@ -445,7 +449,7 @@ namespace varManager
             this.radioButtonCategory7.AutoSize = true;
             this.radioButtonCategory7.Location = new System.Drawing.Point(93, 76);
             this.radioButtonCategory7.Name = "radioButtonCategory7";
-            this.radioButtonCategory7.Size = new System.Drawing.Size(58, 21);
+            this.radioButtonCategory7.Size = new System.Drawing.Size(72, 25);
             this.radioButtonCategory7.TabIndex = 1;
             this.radioButtonCategory7.Text = "pose";
             this.radioButtonCategory7.UseVisualStyleBackColor = true;
@@ -456,7 +460,7 @@ namespace varManager
             this.radioButtonCategory3.AutoSize = true;
             this.radioButtonCategory3.Location = new System.Drawing.Point(7, 76);
             this.radioButtonCategory3.Name = "radioButtonCategory3";
-            this.radioButtonCategory3.Size = new System.Drawing.Size(80, 21);
+            this.radioButtonCategory3.Size = new System.Drawing.Size(98, 25);
             this.radioButtonCategory3.TabIndex = 1;
             this.radioButtonCategory3.Text = "clothing";
             this.radioButtonCategory3.UseVisualStyleBackColor = true;
@@ -467,7 +471,7 @@ namespace varManager
             this.radioButtonCategory5.AutoSize = true;
             this.radioButtonCategory5.Location = new System.Drawing.Point(93, 24);
             this.radioButtonCategory5.Name = "radioButtonCategory5";
-            this.radioButtonCategory5.Size = new System.Drawing.Size(77, 21);
+            this.radioButtonCategory5.Size = new System.Drawing.Size(95, 25);
             this.radioButtonCategory5.TabIndex = 1;
             this.radioButtonCategory5.Text = "morphs";
             this.radioButtonCategory5.UseVisualStyleBackColor = true;
@@ -479,7 +483,7 @@ namespace varManager
             this.radioButtonCategory1.Checked = true;
             this.radioButtonCategory1.Location = new System.Drawing.Point(7, 24);
             this.radioButtonCategory1.Name = "radioButtonCategory1";
-            this.radioButtonCategory1.Size = new System.Drawing.Size(70, 21);
+            this.radioButtonCategory1.Size = new System.Drawing.Size(87, 25);
             this.radioButtonCategory1.TabIndex = 1;
             this.radioButtonCategory1.TabStop = true;
             this.radioButtonCategory1.Text = "scenes";
@@ -491,7 +495,7 @@ namespace varManager
             this.groupBox1.Controls.Add(this.chklistLocation);
             this.groupBox1.Location = new System.Drawing.Point(3, 137);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(170, 117);
+            this.groupBox1.Size = new System.Drawing.Size(170, 64);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "location";
@@ -507,16 +511,16 @@ namespace varManager
             "Save"});
             this.chklistLocation.Location = new System.Drawing.Point(14, 22);
             this.chklistLocation.Name = "chklistLocation";
-            this.chklistLocation.Size = new System.Drawing.Size(147, 84);
+            this.chklistLocation.Size = new System.Drawing.Size(147, 30);
             this.chklistLocation.TabIndex = 0;
             this.chklistLocation.SelectedIndexChanged += new System.EventHandler(this.chklistLocation_SelectedIndexChanged);
             // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.checkedListBoxHideFav);
-            this.groupBox2.Location = new System.Drawing.Point(3, 260);
+            this.groupBox2.Location = new System.Drawing.Point(3, 207);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(170, 91);
+            this.groupBox2.Size = new System.Drawing.Size(170, 62);
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "hideFav";
@@ -531,14 +535,14 @@ namespace varManager
             "Fav"});
             this.checkedListBoxHideFav.Location = new System.Drawing.Point(11, 19);
             this.checkedListBoxHideFav.Name = "checkedListBoxHideFav";
-            this.checkedListBoxHideFav.Size = new System.Drawing.Size(150, 64);
+            this.checkedListBoxHideFav.Size = new System.Drawing.Size(150, 30);
             this.checkedListBoxHideFav.TabIndex = 0;
             this.checkedListBoxHideFav.SelectedIndexChanged += new System.EventHandler(this.checkedListBoxHideFav_SelectedIndexChanged);
             // 
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.textBoxFilter);
-            this.groupBox4.Location = new System.Drawing.Point(3, 357);
+            this.groupBox4.Location = new System.Drawing.Point(3, 275);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(170, 57);
             this.groupBox4.TabIndex = 0;
@@ -549,7 +553,7 @@ namespace varManager
             // 
             this.textBoxFilter.Location = new System.Drawing.Point(11, 20);
             this.textBoxFilter.Name = "textBoxFilter";
-            this.textBoxFilter.Size = new System.Drawing.Size(150, 25);
+            this.textBoxFilter.Size = new System.Drawing.Size(150, 29);
             this.textBoxFilter.TabIndex = 0;
             this.toolTip1.SetToolTip(this.textBoxFilter, "Filter by var name or scene name.");
             this.textBoxFilter.TextChanged += new System.EventHandler(this.textBoxFilter_TextChanged);
@@ -557,9 +561,9 @@ namespace varManager
             // groupBox5
             // 
             this.groupBox5.Controls.Add(this.comboBoxCreator);
-            this.groupBox5.Location = new System.Drawing.Point(3, 420);
+            this.groupBox5.Location = new System.Drawing.Point(3, 338);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(170, 59);
+            this.groupBox5.Size = new System.Drawing.Size(170, 65);
             this.groupBox5.TabIndex = 0;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Creator";
@@ -567,10 +571,11 @@ namespace varManager
             // comboBoxCreator
             // 
             this.comboBoxCreator.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxCreator.Font = new System.Drawing.Font("Cambria", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxCreator.FormattingEnabled = true;
             this.comboBoxCreator.Location = new System.Drawing.Point(11, 19);
             this.comboBoxCreator.Name = "comboBoxCreator";
-            this.comboBoxCreator.Size = new System.Drawing.Size(150, 25);
+            this.comboBoxCreator.Size = new System.Drawing.Size(150, 41);
             this.comboBoxCreator.TabIndex = 0;
             this.comboBoxCreator.SelectedIndexChanged += new System.EventHandler(this.comboBoxCreator_SelectedIndexChanged);
             // 
@@ -578,7 +583,7 @@ namespace varManager
             // 
             this.groupBox6.Controls.Add(this.comboBoxOrderBy);
             this.groupBox6.Controls.Add(this.buttonResetFilter);
-            this.groupBox6.Location = new System.Drawing.Point(3, 485);
+            this.groupBox6.Location = new System.Drawing.Point(3, 409);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Size = new System.Drawing.Size(170, 91);
             this.groupBox6.TabIndex = 0;
@@ -596,7 +601,7 @@ namespace varManager
             "SceneName"});
             this.comboBoxOrderBy.Location = new System.Drawing.Point(11, 19);
             this.comboBoxOrderBy.Name = "comboBoxOrderBy";
-            this.comboBoxOrderBy.Size = new System.Drawing.Size(150, 25);
+            this.comboBoxOrderBy.Size = new System.Drawing.Size(150, 29);
             this.comboBoxOrderBy.TabIndex = 0;
             this.comboBoxOrderBy.SelectedIndexChanged += new System.EventHandler(this.comboBoxOrderBy_SelectedIndexChanged);
             // 
@@ -732,7 +737,7 @@ namespace varManager
             this.radioButtonPersonOrder6.AutoSize = true;
             this.radioButtonPersonOrder6.Location = new System.Drawing.Point(49, 68);
             this.radioButtonPersonOrder6.Name = "radioButtonPersonOrder6";
-            this.radioButtonPersonOrder6.Size = new System.Drawing.Size(37, 21);
+            this.radioButtonPersonOrder6.Size = new System.Drawing.Size(45, 25);
             this.radioButtonPersonOrder6.TabIndex = 13;
             this.radioButtonPersonOrder6.Text = "6";
             this.radioButtonPersonOrder6.UseVisualStyleBackColor = true;
@@ -742,7 +747,7 @@ namespace varManager
             this.radioButtonPersonOrder8.AutoSize = true;
             this.radioButtonPersonOrder8.Location = new System.Drawing.Point(49, 92);
             this.radioButtonPersonOrder8.Name = "radioButtonPersonOrder8";
-            this.radioButtonPersonOrder8.Size = new System.Drawing.Size(37, 21);
+            this.radioButtonPersonOrder8.Size = new System.Drawing.Size(45, 25);
             this.radioButtonPersonOrder8.TabIndex = 13;
             this.radioButtonPersonOrder8.Text = "8";
             this.radioButtonPersonOrder8.UseVisualStyleBackColor = true;
@@ -752,7 +757,7 @@ namespace varManager
             this.radioButtonPersonOrder7.AutoSize = true;
             this.radioButtonPersonOrder7.Location = new System.Drawing.Point(6, 92);
             this.radioButtonPersonOrder7.Name = "radioButtonPersonOrder7";
-            this.radioButtonPersonOrder7.Size = new System.Drawing.Size(37, 21);
+            this.radioButtonPersonOrder7.Size = new System.Drawing.Size(45, 25);
             this.radioButtonPersonOrder7.TabIndex = 13;
             this.radioButtonPersonOrder7.Text = "7";
             this.radioButtonPersonOrder7.UseVisualStyleBackColor = true;
@@ -762,7 +767,7 @@ namespace varManager
             this.radioButtonPersonOrder5.AutoSize = true;
             this.radioButtonPersonOrder5.Location = new System.Drawing.Point(6, 68);
             this.radioButtonPersonOrder5.Name = "radioButtonPersonOrder5";
-            this.radioButtonPersonOrder5.Size = new System.Drawing.Size(37, 21);
+            this.radioButtonPersonOrder5.Size = new System.Drawing.Size(45, 25);
             this.radioButtonPersonOrder5.TabIndex = 13;
             this.radioButtonPersonOrder5.Text = "5";
             this.radioButtonPersonOrder5.UseVisualStyleBackColor = true;
@@ -772,7 +777,7 @@ namespace varManager
             this.radioButtonPersonOrder4.AutoSize = true;
             this.radioButtonPersonOrder4.Location = new System.Drawing.Point(49, 44);
             this.radioButtonPersonOrder4.Name = "radioButtonPersonOrder4";
-            this.radioButtonPersonOrder4.Size = new System.Drawing.Size(37, 21);
+            this.radioButtonPersonOrder4.Size = new System.Drawing.Size(45, 25);
             this.radioButtonPersonOrder4.TabIndex = 13;
             this.radioButtonPersonOrder4.Text = "4";
             this.radioButtonPersonOrder4.UseVisualStyleBackColor = true;
@@ -782,7 +787,7 @@ namespace varManager
             this.radioButtonPersonOrder3.AutoSize = true;
             this.radioButtonPersonOrder3.Location = new System.Drawing.Point(6, 44);
             this.radioButtonPersonOrder3.Name = "radioButtonPersonOrder3";
-            this.radioButtonPersonOrder3.Size = new System.Drawing.Size(37, 21);
+            this.radioButtonPersonOrder3.Size = new System.Drawing.Size(45, 25);
             this.radioButtonPersonOrder3.TabIndex = 13;
             this.radioButtonPersonOrder3.Text = "3";
             this.radioButtonPersonOrder3.UseVisualStyleBackColor = true;
@@ -792,7 +797,7 @@ namespace varManager
             this.radioButtonPersonOrder2.AutoSize = true;
             this.radioButtonPersonOrder2.Location = new System.Drawing.Point(49, 20);
             this.radioButtonPersonOrder2.Name = "radioButtonPersonOrder2";
-            this.radioButtonPersonOrder2.Size = new System.Drawing.Size(37, 21);
+            this.radioButtonPersonOrder2.Size = new System.Drawing.Size(45, 25);
             this.radioButtonPersonOrder2.TabIndex = 13;
             this.radioButtonPersonOrder2.Text = "2";
             this.radioButtonPersonOrder2.UseVisualStyleBackColor = true;
@@ -803,7 +808,7 @@ namespace varManager
             this.radioButtonPersonOrder1.Checked = true;
             this.radioButtonPersonOrder1.Location = new System.Drawing.Point(6, 20);
             this.radioButtonPersonOrder1.Name = "radioButtonPersonOrder1";
-            this.radioButtonPersonOrder1.Size = new System.Drawing.Size(37, 21);
+            this.radioButtonPersonOrder1.Size = new System.Drawing.Size(45, 25);
             this.radioButtonPersonOrder1.TabIndex = 13;
             this.radioButtonPersonOrder1.TabStop = true;
             this.radioButtonPersonOrder1.Text = "1";
@@ -923,9 +928,29 @@ namespace varManager
             // 
             this.varsTableAdapter.ClearBeforeFill = true;
             // 
+            // groupBox7
+            // 
+            this.groupBox7.Controls.Add(this.button1);
+            this.groupBox7.Location = new System.Drawing.Point(3, 506);
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.Size = new System.Drawing.Size(170, 91);
+            this.groupBox7.TabIndex = 2;
+            this.groupBox7.TabStop = false;
+            this.groupBox7.Text = "Shortcuts";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(6, 28);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "Manage Package";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // FormScenes
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1324, 672);
             this.Controls.Add(this.panelImage);
@@ -963,6 +988,7 @@ namespace varManager
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPreview)).EndInit();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.varManagerDataSet)).EndInit();
+            this.groupBox7.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1039,5 +1065,7 @@ namespace varManager
         private System.Windows.Forms.RadioButton radioButtonPersonOrder1;
         private System.Windows.Forms.CheckBox checkBoxForMale;
         private System.Windows.Forms.Button buttonClearCache;
+        private System.Windows.Forms.GroupBox groupBox7;
+        private System.Windows.Forms.Button button1;
     }
 }

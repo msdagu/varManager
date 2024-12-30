@@ -378,6 +378,33 @@ namespace varManager
             var Creators = listFilterScene3.Select(q => q.creatorName).Distinct().OrderBy(o => o).ToArray();
             comboBoxCreator.Items.Clear();
             comboBoxCreator.Items.Add("____ALL");
+            comboBoxCreator.Items.Add("VamTimbo");
+            comboBoxCreator.Items.Add("CuddleMocap");
+            comboBoxCreator.Items.Add("KittyMocap");
+            comboBoxCreator.Items.Add("ReignMocap");
+            comboBoxCreator.Items.Add("PrimeMocap");
+            comboBoxCreator.Items.Add("ispinox");
+            comboBoxCreator.Items.Add("jyy");
+            comboBoxCreator.Items.Add("callimohu");
+            comboBoxCreator.Items.Add("FRK");
+            comboBoxCreator.Items.Add("lv");
+            comboBoxCreator.Items.Add("Noc_This");
+            comboBoxCreator.Items.Add("MonsterShinkai");
+            comboBoxCreator.Items.Add("hdzjoy");
+            comboBoxCreator.Items.Add("Dnaddr");
+            comboBoxCreator.Items.Add("realclone");
+            comboBoxCreator.Items.Add("qiaqia");
+            comboBoxCreator.Items.Add("Mowang_nixi");
+            comboBoxCreator.Items.Add("Qing");
+            comboBoxCreator.Items.Add("VL_13");
+            comboBoxCreator.Items.Add("Shadow Venom");
+            comboBoxCreator.Items.Add("DateKnight");
+            comboBoxCreator.Items.Add("VAM-YJ");
+            comboBoxCreator.Items.Add("Yep");
+            comboBoxCreator.Items.Add("starlu");
+            comboBoxCreator.Items.Add("vvvevevvv");
+            comboBoxCreator.Items.Add("GSLKNIGHT");
+            comboBoxCreator.Items.Add("DateKnight");
             comboBoxCreator.Items.AddRange(Creators);
             if (!string.IsNullOrEmpty(creatorname) && creatorname != "____ALL")
             {
@@ -1144,6 +1171,12 @@ namespace varManager
                 catch { }
                 UpdateButtonClearCache();
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form1 form1 = new Form1();
+            form1.Show();
         }
 
         private void buttonFilterByCreator_Click(object sender, EventArgs e)
