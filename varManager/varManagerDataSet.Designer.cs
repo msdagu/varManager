@@ -7965,10 +7965,11 @@ namespace varManager.varManagerDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("morphs", "morphs");
             tableMapping.ColumnMappings.Add("pose", "pose");
             tableMapping.ColumnMappings.Add("skin", "skin");
+            tableMapping.ColumnMappings.Add("insertDate", "insertDate");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM `vars` WHERE ((`varName` = ?) AND ((? = 1 AND `varPath` IS NULL) OR (`varPath` = ?)) AND ((? = 1 AND `creatorName` IS NULL) OR (`creatorName` = ?)) AND ((? = 1 AND `packageName` IS NULL) OR (`packageName` = ?)) AND ((? = 1 AND `version` IS NULL) OR (`version` = ?)) AND ((? = 1 AND `metaDate` IS NULL) OR (`metaDate` = ?)) AND ((? = 1 AND `varDate` IS NULL) OR (`varDate` = ?)) AND ((? = 1 AND `filesize` IS NULL) OR (`filesize` = ?)) AND ((? = 1 AND `scenes` IS NULL) OR (`scenes` = ?)) AND ((? = 1 AND `looks` IS NULL) OR (`looks` = ?)) AND ((? = 1 AND `clothing` IS NULL) OR (`clothing` = ?)) AND ((? = 1 AND `hairstyle` IS NULL) OR (`hairstyle` = ?)) AND ((? = 1 AND `plugins` IS NULL) OR (`plugins` = ?)) AND ((? = 1 AND `assets` IS NULL) OR (`assets` = ?)) AND ((? = 1 AND `morphs` IS NULL) OR (`morphs` = ?)) AND ((? = 1 AND `pose` IS NULL) OR (`pose` = ?)) AND ((? = 1 AND `skin` IS NULL) OR (`skin` = ?)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM `vars` WHERE ((`varName` = ?) AND ((? = 1 AND `varPath` IS NULL) OR (`varPath` = ?)) AND ((? = 1 AND `creatorName` IS NULL) OR (`creatorName` = ?)) AND ((? = 1 AND `packageName` IS NULL) OR (`packageName` = ?)) AND ((? = 1 AND `version` IS NULL) OR (`version` = ?)) AND ((? = 1 AND `insertDate` IS NULL) OR (`insertDate` = ?)) AND ((? = 1 AND `metaDate` IS NULL) OR (`metaDate` = ?)) AND ((? = 1 AND `varDate` IS NULL) OR (`varDate` = ?)) AND ((? = 1 AND `filesize` IS NULL) OR (`filesize` = ?)) AND ((? = 1 AND `scenes` IS NULL) OR (`scenes` = ?)) AND ((? = 1 AND `looks` IS NULL) OR (`looks` = ?)) AND ((? = 1 AND `clothing` IS NULL) OR (`clothing` = ?)) AND ((? = 1 AND `hairstyle` IS NULL) OR (`hairstyle` = ?)) AND ((? = 1 AND `plugins` IS NULL) OR (`plugins` = ?)) AND ((? = 1 AND `assets` IS NULL) OR (`assets` = ?)) AND ((? = 1 AND `morphs` IS NULL) OR (`morphs` = ?)) AND ((? = 1 AND `pose` IS NULL) OR (`pose` = ?)) AND ((? = 1 AND `skin` IS NULL) OR (`skin` = ?)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_varName", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "varName", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_varPath", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "varPath", global::System.Data.DataRowVersion.Original, true, null));
@@ -7979,6 +7980,8 @@ namespace varManager.varManagerDataSetTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_packageName", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "packageName", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_version", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "version", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_version", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "version", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_insertDate", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "insertDate", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_insertDate", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "insertDate", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_metaDate", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "metaDate", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_metaDate", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "metaDate", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_varDate", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "varDate", global::System.Data.DataRowVersion.Original, true, null));
@@ -8005,13 +8008,14 @@ namespace varManager.varManagerDataSetTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_skin", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "skin", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.InsertCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO `vars` (`varName`, `varPath`, `creatorName`, `packageName`, `version`, `metaDate`, `varDate`, `filesize`, `scenes`, `looks`, `clothing`, `hairstyle`, `plugins`, `assets`, `morphs`, `pose`, `skin`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO `vars` (`varName`, `varPath`, `creatorName`, `packageName`, `version`, `insertDate`, `metaDate`, `varDate`, `filesize`, `scenes`, `looks`, `clothing`, `hairstyle`, `plugins`, `assets`, `morphs`, `pose`, `skin`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("varName", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "varName", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("varPath", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "varPath", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("creatorName", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "creatorName", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("packageName", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "packageName", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("version", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "version", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("insertDate", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "insertDate", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("metaDate", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "metaDate", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("varDate", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "varDate", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("filesize", global::System.Data.OleDb.OleDbType.Double, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "filesize", global::System.Data.DataRowVersion.Current, false, null));
@@ -8026,13 +8030,14 @@ namespace varManager.varManagerDataSetTableAdapters {
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("skin", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "skin", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE `vars` SET `varName` = ?, `varPath` = ?, `creatorName` = ?, `packageName` = ?, `version` = ?, `metaDate` = ?, `varDate` = ?, `filesize` = ?, `scenes` = ?, `looks` = ?, `clothing` = ?, `hairstyle` = ?, `plugins` = ?, `assets` = ?, `morphs` = ?, `pose` = ?, `skin` = ? WHERE ((`varName` = ?) AND ((? = 1 AND `varPath` IS NULL) OR (`varPath` = ?)) AND ((? = 1 AND `creatorName` IS NULL) OR (`creatorName` = ?)) AND ((? = 1 AND `packageName` IS NULL) OR (`packageName` = ?)) AND ((? = 1 AND `version` IS NULL) OR (`version` = ?)) AND ((? = 1 AND `metaDate` IS NULL) OR (`metaDate` = ?)) AND ((? = 1 AND `varDate` IS NULL) OR (`varDate` = ?)) AND ((? = 1 AND `filesize` IS NULL) OR (`filesize` = ?)) AND ((? = 1 AND `scenes` IS NULL) OR (`scenes` = ?)) AND ((? = 1 AND `looks` IS NULL) OR (`looks` = ?)) AND ((? = 1 AND `clothing` IS NULL) OR (`clothing` = ?)) AND ((? = 1 AND `hairstyle` IS NULL) OR (`hairstyle` = ?)) AND ((? = 1 AND `plugins` IS NULL) OR (`plugins` = ?)) AND ((? = 1 AND `assets` IS NULL) OR (`assets` = ?)) AND ((? = 1 AND `morphs` IS NULL) OR (`morphs` = ?)) AND ((? = 1 AND `pose` IS NULL) OR (`pose` = ?)) AND ((? = 1 AND `skin` IS NULL) OR (`skin` = ?)))";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE `vars` SET `varName` = ?, `varPath` = ?, `creatorName` = ?, `packageName` = ?, `version` = ?, `insertDate` = ?, `metaDate` = ?, `varDate` = ?, `filesize` = ?, `scenes` = ?, `looks` = ?, `clothing` = ?, `hairstyle` = ?, `plugins` = ?, `assets` = ?, `morphs` = ?, `pose` = ?, `skin` = ? WHERE ((`varName` = ?) AND ((? = 1 AND `varPath` IS NULL) OR (`varPath` = ?)) AND ((? = 1 AND `creatorName` IS NULL) OR (`creatorName` = ?)) AND ((? = 1 AND `packageName` IS NULL) OR (`packageName` = ?)) AND ((? = 1 AND `version` IS NULL) OR (`version` = ?)) AND ((? = 1 AND `insertDate` IS NULL) OR (`insertDate` = ?)) AND ((? = 1 AND `metaDate` IS NULL) OR (`metaDate` = ?)) AND ((? = 1 AND `varDate` IS NULL) OR (`varDate` = ?)) AND ((? = 1 AND `filesize` IS NULL) OR (`filesize` = ?)) AND ((? = 1 AND `scenes` IS NULL) OR (`scenes` = ?)) AND ((? = 1 AND `looks` IS NULL) OR (`looks` = ?)) AND ((? = 1 AND `clothing` IS NULL) OR (`clothing` = ?)) AND ((? = 1 AND `hairstyle` IS NULL) OR (`hairstyle` = ?)) AND ((? = 1 AND `plugins` IS NULL) OR (`plugins` = ?)) AND ((? = 1 AND `assets` IS NULL) OR (`assets` = ?)) AND ((? = 1 AND `morphs` IS NULL) OR (`morphs` = ?)) AND ((? = 1 AND `pose` IS NULL) OR (`pose` = ?)) AND ((? = 1 AND `skin` IS NULL) OR (`skin` = ?)))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("varName", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "varName", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("varPath", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "varPath", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("creatorName", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "creatorName", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("packageName", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "packageName", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("version", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "version", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("insertDate", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "insertDate", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("metaDate", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "metaDate", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("varDate", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "varDate", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("filesize", global::System.Data.OleDb.OleDbType.Double, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "filesize", global::System.Data.DataRowVersion.Current, false, null));
@@ -8054,6 +8059,8 @@ namespace varManager.varManagerDataSetTableAdapters {
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_packageName", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "packageName", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_version", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "version", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_version", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "version", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_insertDate", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "insertDate", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_insertDate", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "insertDate", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_metaDate", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "metaDate", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_metaDate", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "metaDate", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_varDate", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "varDate", global::System.Data.DataRowVersion.Original, true, null));
@@ -8093,9 +8100,9 @@ namespace varManager.varManagerDataSetTableAdapters {
             this._commandCollection = new global::System.Data.OleDb.OleDbCommand[1];
             this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT varName, varPath, creatorName, packageName, version, metaDate, varDate, fi" +
-                "lesize, scenes, looks, clothing, hairstyle, plugins, assets, morphs, pose, skin " +
-                "FROM vars";
+            this._commandCollection[0].CommandText = "SELECT varName, varPath, creatorName, packageName, version, insertDate, metaDate," +
+                " varDate, filesize, scenes, looks, clothing, hairstyle, plugins, assets, morphs," +
+                " pose, skin FROM vars";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -8162,6 +8169,7 @@ namespace varManager.varManagerDataSetTableAdapters {
                     string Original_creatorName, 
                     string Original_packageName, 
                     global::System.Nullable<int> Original_version, 
+                    global::System.Nullable<global::System.DateTime> Original_insertDate, 
                     global::System.Nullable<global::System.DateTime> Original_metaDate, 
                     global::System.Nullable<global::System.DateTime> Original_varDate, 
                     global::System.Nullable<double> Original_filesize, 
@@ -8212,101 +8220,109 @@ namespace varManager.varManagerDataSetTableAdapters {
                 this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
-            if ((Original_metaDate.HasValue == true)) {
+            if ((Original_insertDate.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[10].Value = ((System.DateTime)(Original_metaDate.Value));
+                this.Adapter.DeleteCommand.Parameters[10].Value = ((System.DateTime)(Original_insertDate.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[10].Value = global::System.DBNull.Value;
             }
-            if ((Original_varDate.HasValue == true)) {
+            if ((Original_metaDate.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[12].Value = ((System.DateTime)(Original_varDate.Value));
+                this.Adapter.DeleteCommand.Parameters[12].Value = ((System.DateTime)(Original_metaDate.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[12].Value = global::System.DBNull.Value;
             }
-            if ((Original_filesize.HasValue == true)) {
+            if ((Original_varDate.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[14].Value = ((double)(Original_filesize.Value));
+                this.Adapter.DeleteCommand.Parameters[14].Value = ((System.DateTime)(Original_varDate.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[14].Value = global::System.DBNull.Value;
             }
-            if ((Original_scenes.HasValue == true)) {
+            if ((Original_filesize.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[15].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[16].Value = ((int)(Original_scenes.Value));
+                this.Adapter.DeleteCommand.Parameters[16].Value = ((double)(Original_filesize.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[15].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[16].Value = global::System.DBNull.Value;
             }
-            if ((Original_looks.HasValue == true)) {
+            if ((Original_scenes.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[17].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[18].Value = ((int)(Original_looks.Value));
+                this.Adapter.DeleteCommand.Parameters[18].Value = ((int)(Original_scenes.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[17].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[18].Value = global::System.DBNull.Value;
             }
-            if ((Original_clothing.HasValue == true)) {
+            if ((Original_looks.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[19].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[20].Value = ((int)(Original_clothing.Value));
+                this.Adapter.DeleteCommand.Parameters[20].Value = ((int)(Original_looks.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[19].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[20].Value = global::System.DBNull.Value;
             }
-            if ((Original_hairstyle.HasValue == true)) {
+            if ((Original_clothing.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[21].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[22].Value = ((int)(Original_hairstyle.Value));
+                this.Adapter.DeleteCommand.Parameters[22].Value = ((int)(Original_clothing.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[21].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[22].Value = global::System.DBNull.Value;
             }
-            if ((Original_plugins.HasValue == true)) {
+            if ((Original_hairstyle.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[23].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[24].Value = ((int)(Original_plugins.Value));
+                this.Adapter.DeleteCommand.Parameters[24].Value = ((int)(Original_hairstyle.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[23].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[24].Value = global::System.DBNull.Value;
             }
-            if ((Original_assets.HasValue == true)) {
+            if ((Original_plugins.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[25].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[26].Value = ((int)(Original_assets.Value));
+                this.Adapter.DeleteCommand.Parameters[26].Value = ((int)(Original_plugins.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[25].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[26].Value = global::System.DBNull.Value;
             }
-            if ((Original_morphs.HasValue == true)) {
+            if ((Original_assets.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[27].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[28].Value = ((int)(Original_morphs.Value));
+                this.Adapter.DeleteCommand.Parameters[28].Value = ((int)(Original_assets.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[27].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[28].Value = global::System.DBNull.Value;
             }
-            if ((Original_pose.HasValue == true)) {
+            if ((Original_morphs.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[29].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[30].Value = ((int)(Original_pose.Value));
+                this.Adapter.DeleteCommand.Parameters[30].Value = ((int)(Original_morphs.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[29].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[30].Value = global::System.DBNull.Value;
             }
-            if ((Original_skin.HasValue == true)) {
+            if ((Original_pose.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[31].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[32].Value = ((int)(Original_skin.Value));
+                this.Adapter.DeleteCommand.Parameters[32].Value = ((int)(Original_pose.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[31].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[32].Value = global::System.DBNull.Value;
+            }
+            if ((Original_skin.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[33].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[34].Value = ((int)(Original_skin.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[33].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[34].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -8334,6 +8350,7 @@ namespace varManager.varManagerDataSetTableAdapters {
                     string creatorName, 
                     string packageName, 
                     global::System.Nullable<int> version, 
+                    global::System.Nullable<global::System.DateTime> insertDate, 
                     global::System.Nullable<global::System.DateTime> metaDate, 
                     global::System.Nullable<global::System.DateTime> varDate, 
                     global::System.Nullable<double> filesize, 
@@ -8376,77 +8393,83 @@ namespace varManager.varManagerDataSetTableAdapters {
             else {
                 this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
-            if ((metaDate.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[5].Value = ((System.DateTime)(metaDate.Value));
+            if ((insertDate.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[5].Value = ((System.DateTime)(insertDate.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
-            if ((varDate.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[6].Value = ((System.DateTime)(varDate.Value));
+            if ((metaDate.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[6].Value = ((System.DateTime)(metaDate.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
-            if ((filesize.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[7].Value = ((double)(filesize.Value));
+            if ((varDate.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[7].Value = ((System.DateTime)(varDate.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[7].Value = global::System.DBNull.Value;
             }
-            if ((scenes.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[8].Value = ((int)(scenes.Value));
+            if ((filesize.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[8].Value = ((double)(filesize.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
-            if ((looks.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[9].Value = ((int)(looks.Value));
+            if ((scenes.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[9].Value = ((int)(scenes.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[9].Value = global::System.DBNull.Value;
             }
-            if ((clothing.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[10].Value = ((int)(clothing.Value));
+            if ((looks.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[10].Value = ((int)(looks.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[10].Value = global::System.DBNull.Value;
             }
-            if ((hairstyle.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[11].Value = ((int)(hairstyle.Value));
+            if ((clothing.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[11].Value = ((int)(clothing.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[11].Value = global::System.DBNull.Value;
             }
-            if ((plugins.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[12].Value = ((int)(plugins.Value));
+            if ((hairstyle.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[12].Value = ((int)(hairstyle.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[12].Value = global::System.DBNull.Value;
             }
-            if ((assets.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[13].Value = ((int)(assets.Value));
+            if ((plugins.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[13].Value = ((int)(plugins.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[13].Value = global::System.DBNull.Value;
             }
-            if ((morphs.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[14].Value = ((int)(morphs.Value));
+            if ((assets.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[14].Value = ((int)(assets.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[14].Value = global::System.DBNull.Value;
             }
-            if ((pose.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[15].Value = ((int)(pose.Value));
+            if ((morphs.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[15].Value = ((int)(morphs.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[15].Value = global::System.DBNull.Value;
             }
-            if ((skin.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[16].Value = ((int)(skin.Value));
+            if ((pose.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[16].Value = ((int)(pose.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[16].Value = global::System.DBNull.Value;
+            }
+            if ((skin.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[17].Value = ((int)(skin.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[17].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -8474,6 +8497,7 @@ namespace varManager.varManagerDataSetTableAdapters {
                     string creatorName, 
                     string packageName, 
                     global::System.Nullable<int> version, 
+                    global::System.Nullable<global::System.DateTime> insertDate, 
                     global::System.Nullable<global::System.DateTime> metaDate, 
                     global::System.Nullable<global::System.DateTime> varDate, 
                     global::System.Nullable<double> filesize, 
@@ -8491,6 +8515,7 @@ namespace varManager.varManagerDataSetTableAdapters {
                     string Original_creatorName, 
                     string Original_packageName, 
                     global::System.Nullable<int> Original_version, 
+                    global::System.Nullable<global::System.DateTime> Original_insertDate, 
                     global::System.Nullable<global::System.DateTime> Original_metaDate, 
                     global::System.Nullable<global::System.DateTime> Original_varDate, 
                     global::System.Nullable<double> Original_filesize, 
@@ -8533,211 +8558,225 @@ namespace varManager.varManagerDataSetTableAdapters {
             else {
                 this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
-            if ((metaDate.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((System.DateTime)(metaDate.Value));
+            if ((insertDate.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((System.DateTime)(insertDate.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
-            if ((varDate.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((System.DateTime)(varDate.Value));
+            if ((metaDate.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((System.DateTime)(metaDate.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
-            if ((filesize.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((double)(filesize.Value));
+            if ((varDate.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((System.DateTime)(varDate.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
             }
-            if ((scenes.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(scenes.Value));
+            if ((filesize.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((double)(filesize.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
-            if ((looks.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(looks.Value));
+            if ((scenes.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(scenes.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
             }
-            if ((clothing.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((int)(clothing.Value));
+            if ((looks.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((int)(looks.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
             }
-            if ((hairstyle.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((int)(hairstyle.Value));
+            if ((clothing.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((int)(clothing.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
             }
-            if ((plugins.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((int)(plugins.Value));
+            if ((hairstyle.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((int)(hairstyle.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
             }
-            if ((assets.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((int)(assets.Value));
+            if ((plugins.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((int)(plugins.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
             }
-            if ((morphs.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((int)(morphs.Value));
+            if ((assets.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((int)(assets.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[14].Value = global::System.DBNull.Value;
             }
-            if ((pose.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((int)(pose.Value));
+            if ((morphs.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((int)(morphs.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[15].Value = global::System.DBNull.Value;
             }
-            if ((skin.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((int)(skin.Value));
+            if ((pose.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((int)(pose.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[16].Value = global::System.DBNull.Value;
+            }
+            if ((skin.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((int)(skin.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[17].Value = global::System.DBNull.Value;
             }
             if ((Original_varName == null)) {
                 throw new global::System.ArgumentNullException("Original_varName");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[17].Value = ((string)(Original_varName));
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((string)(Original_varName));
             }
             if ((Original_varPath == null)) {
-                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[19].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[20].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[19].Value = ((string)(Original_varPath));
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((string)(Original_varPath));
             }
             if ((Original_creatorName == null)) {
-                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[21].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[22].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[21].Value = ((string)(Original_creatorName));
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[22].Value = ((string)(Original_creatorName));
             }
             if ((Original_packageName == null)) {
-                this.Adapter.UpdateCommand.Parameters[22].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[23].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[23].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[24].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[22].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[23].Value = ((string)(Original_packageName));
+                this.Adapter.UpdateCommand.Parameters[23].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[24].Value = ((string)(Original_packageName));
             }
             if ((Original_version.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[24].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[25].Value = ((int)(Original_version.Value));
+                this.Adapter.UpdateCommand.Parameters[25].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[26].Value = ((int)(Original_version.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[24].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[25].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[25].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[26].Value = global::System.DBNull.Value;
+            }
+            if ((Original_insertDate.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[27].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[28].Value = ((System.DateTime)(Original_insertDate.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[27].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[28].Value = global::System.DBNull.Value;
             }
             if ((Original_metaDate.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[26].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[27].Value = ((System.DateTime)(Original_metaDate.Value));
+                this.Adapter.UpdateCommand.Parameters[29].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[30].Value = ((System.DateTime)(Original_metaDate.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[26].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[27].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[29].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[30].Value = global::System.DBNull.Value;
             }
             if ((Original_varDate.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[28].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[29].Value = ((System.DateTime)(Original_varDate.Value));
+                this.Adapter.UpdateCommand.Parameters[31].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[32].Value = ((System.DateTime)(Original_varDate.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[28].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[29].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[31].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[32].Value = global::System.DBNull.Value;
             }
             if ((Original_filesize.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[30].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[31].Value = ((double)(Original_filesize.Value));
+                this.Adapter.UpdateCommand.Parameters[33].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[34].Value = ((double)(Original_filesize.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[30].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[31].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[33].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[34].Value = global::System.DBNull.Value;
             }
             if ((Original_scenes.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[32].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[33].Value = ((int)(Original_scenes.Value));
+                this.Adapter.UpdateCommand.Parameters[35].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[36].Value = ((int)(Original_scenes.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[32].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[33].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[35].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[36].Value = global::System.DBNull.Value;
             }
             if ((Original_looks.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[34].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[35].Value = ((int)(Original_looks.Value));
+                this.Adapter.UpdateCommand.Parameters[37].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[38].Value = ((int)(Original_looks.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[34].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[35].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[37].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[38].Value = global::System.DBNull.Value;
             }
             if ((Original_clothing.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[36].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[37].Value = ((int)(Original_clothing.Value));
+                this.Adapter.UpdateCommand.Parameters[39].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[40].Value = ((int)(Original_clothing.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[36].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[37].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[39].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[40].Value = global::System.DBNull.Value;
             }
             if ((Original_hairstyle.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[38].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[39].Value = ((int)(Original_hairstyle.Value));
+                this.Adapter.UpdateCommand.Parameters[41].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[42].Value = ((int)(Original_hairstyle.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[38].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[39].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[41].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[42].Value = global::System.DBNull.Value;
             }
             if ((Original_plugins.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[40].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[41].Value = ((int)(Original_plugins.Value));
+                this.Adapter.UpdateCommand.Parameters[43].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[44].Value = ((int)(Original_plugins.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[40].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[41].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[43].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[44].Value = global::System.DBNull.Value;
             }
             if ((Original_assets.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[42].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[43].Value = ((int)(Original_assets.Value));
+                this.Adapter.UpdateCommand.Parameters[45].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[46].Value = ((int)(Original_assets.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[42].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[43].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[45].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[46].Value = global::System.DBNull.Value;
             }
             if ((Original_morphs.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[44].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[45].Value = ((int)(Original_morphs.Value));
+                this.Adapter.UpdateCommand.Parameters[47].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[48].Value = ((int)(Original_morphs.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[44].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[45].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[47].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[48].Value = global::System.DBNull.Value;
             }
             if ((Original_pose.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[46].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[47].Value = ((int)(Original_pose.Value));
+                this.Adapter.UpdateCommand.Parameters[49].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[50].Value = ((int)(Original_pose.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[46].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[47].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[49].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[50].Value = global::System.DBNull.Value;
             }
             if ((Original_skin.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[48].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[49].Value = ((int)(Original_skin.Value));
+                this.Adapter.UpdateCommand.Parameters[51].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[52].Value = ((int)(Original_skin.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[48].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[49].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[51].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[52].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -8764,6 +8803,7 @@ namespace varManager.varManagerDataSetTableAdapters {
                     string creatorName, 
                     string packageName, 
                     global::System.Nullable<int> version, 
+                    global::System.Nullable<global::System.DateTime> insertDate, 
                     global::System.Nullable<global::System.DateTime> metaDate, 
                     global::System.Nullable<global::System.DateTime> varDate, 
                     global::System.Nullable<double> filesize, 
@@ -8781,6 +8821,7 @@ namespace varManager.varManagerDataSetTableAdapters {
                     string Original_creatorName, 
                     string Original_packageName, 
                     global::System.Nullable<int> Original_version, 
+                    global::System.Nullable<global::System.DateTime> Original_insertDate, 
                     global::System.Nullable<global::System.DateTime> Original_metaDate, 
                     global::System.Nullable<global::System.DateTime> Original_varDate, 
                     global::System.Nullable<double> Original_filesize, 
@@ -8793,7 +8834,7 @@ namespace varManager.varManagerDataSetTableAdapters {
                     global::System.Nullable<int> Original_morphs, 
                     global::System.Nullable<int> Original_pose, 
                     global::System.Nullable<int> Original_skin) {
-            return this.Update(Original_varName, varPath, creatorName, packageName, version, metaDate, varDate, filesize, scenes, looks, clothing, hairstyle, plugins, assets, morphs, pose, skin, Original_varName, Original_varPath, Original_creatorName, Original_packageName, Original_version, Original_metaDate, Original_varDate, Original_filesize, Original_scenes, Original_looks, Original_clothing, Original_hairstyle, Original_plugins, Original_assets, Original_morphs, Original_pose, Original_skin);
+            return this.Update(Original_varName, varPath, creatorName, packageName, version, insertDate, metaDate, varDate, filesize, scenes, looks, clothing, hairstyle, plugins, assets, morphs, pose, skin, Original_varName, Original_varPath, Original_creatorName, Original_packageName, Original_version, Original_insertDate, Original_metaDate, Original_varDate, Original_filesize, Original_scenes, Original_looks, Original_clothing, Original_hairstyle, Original_plugins, Original_assets, Original_morphs, Original_pose, Original_skin);
         }
     }
     

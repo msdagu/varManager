@@ -13,7 +13,7 @@ namespace varManager
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormScenes());
+            Application.Run(new Form1());
         }
     }
 }
