@@ -760,6 +760,30 @@ namespace varManager
         private string curVarName = "", curEntryName = "";
         private JSONClass jsonLoadScene;
 
+        private void listView_ItemSelectionChanged(object sender, System.Windows.Forms.ListViewItemSelectionChangedEventArgs e)
+        {
+            if (e.IsSelected)
+            {
+                var item = e.Item;
+                curVarName = item.SubItems[1].Text;
+                curEntryName = item.SubItems[2].Text;
+                string varname = "";
+                if (!string.IsNullOrEmpty(curVarName) && curVarName != "(save).")
+                {
+                    varname = item.SubItems[1].Text + ":/";
+                }
+                jsonLoadScene = new JSONClass();
+                jsonLoadScene.Add("rescan", item.SubItems[7].Text == "not Installed" ? "true" : "false");
+
+                jsonLoadScene.Add("resources", new JSONArray());
+                JSONArray resources = jsonLoadScene["resources"].AsArray;
+                resources.Add(new JSONClass());
+                JSONClass resource = (JSONClass)resources[resources.Count - 1];
+                resource.Add("type", item.SubItems[6].Text);
+                resource.Add("saveName", varname + curEntryName.Replace('\\', '/'));
+            }
+        }
+
         private void listView_ItemActivate(object sender, EventArgs e)
         {
             ListView listView=(ListView)sender;
@@ -1175,8 +1199,16 @@ namespace varManager
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Form1 form1 = new Form1();
-            form1.Show();
+            JSONArray resources = jsonLoadScene["resources"].AsArray;
+            string saveName = "";
+
+            if (resources.Count > 0)
+            {
+                JSONClass resource = (JSONClass)resources[0];
+                saveName = resource["saveName"].Value;
+            }
+
+            form1.LoadScene(jsonLoadScene, checkBox1.Checked, checkBox2.Checked, "unknown", 1);
         }
 
         private void buttonFilterByCreator_Click(object sender, EventArgs e)

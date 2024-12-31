@@ -71,6 +71,8 @@ namespace varManager
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.comboBoxOrderBy = new System.Windows.Forms.ComboBox();
             this.buttonResetFilter = new System.Windows.Forms.Button();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.buttonLoadscene = new System.Windows.Forms.Button();
             this.panelImage = new System.Windows.Forms.Panel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
@@ -101,8 +103,8 @@ namespace varManager
             this.scenesTableAdapter = new varManager.varManagerDataSetTableAdapters.scenesTableAdapter();
             this.installStatusTableAdapter = new varManager.varManagerDataSetTableAdapters.installStatusTableAdapter();
             this.varsTableAdapter = new varManager.varManagerDataSetTableAdapters.varsTableAdapter();
-            this.groupBox7 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -116,6 +118,7 @@ namespace varManager
             this.groupBox4.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox6.SuspendLayout();
+            this.groupBox7.SuspendLayout();
             this.panelImage.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -123,7 +126,6 @@ namespace varManager
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPreview)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.varManagerDataSet)).BeginInit();
-            this.groupBox7.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -134,7 +136,7 @@ namespace varManager
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 55F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 233F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 238F));
             this.tableLayoutPanel1.Controls.Add(this.panel5, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.panel6, 3, 1);
             this.tableLayoutPanel1.Controls.Add(this.listViewHide, 0, 1);
@@ -159,7 +161,7 @@ namespace varManager
             this.panel5.Controls.Add(this.buttonRemoveHide);
             this.panel5.Controls.Add(this.buttonAddHide);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel5.Location = new System.Drawing.Point(330, 43);
+            this.panel5.Location = new System.Drawing.Point(328, 43);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(49, 590);
             this.panel5.TabIndex = 4;
@@ -193,7 +195,7 @@ namespace varManager
             this.panel6.Controls.Add(this.buttonAddFav);
             this.panel6.Controls.Add(this.buttonRemoveFav);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel6.Location = new System.Drawing.Point(711, 43);
+            this.panel6.Location = new System.Drawing.Point(708, 43);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(49, 590);
             this.panel6.TabIndex = 5;
@@ -233,7 +235,7 @@ namespace varManager
             this.listViewHide.LineColor = System.Drawing.Color.Red;
             this.listViewHide.Location = new System.Drawing.Point(3, 43);
             this.listViewHide.Name = "listViewHide";
-            this.listViewHide.Size = new System.Drawing.Size(321, 590);
+            this.listViewHide.Size = new System.Drawing.Size(319, 590);
             this.listViewHide.TabIndex = 7;
             this.toolTip1.SetToolTip(this.listViewHide, "Normal list,Multiple selections available,double click wite");
             this.listViewHide.UseCompatibleStateImageBehavior = false;
@@ -257,14 +259,15 @@ namespace varManager
             this.listViewNormal.HideSelection = false;
             this.listViewNormal.LargeImageList = this.imageListScenes;
             this.listViewNormal.LineColor = System.Drawing.Color.Red;
-            this.listViewNormal.Location = new System.Drawing.Point(385, 43);
+            this.listViewNormal.Location = new System.Drawing.Point(383, 43);
             this.listViewNormal.Name = "listViewNormal";
-            this.listViewNormal.Size = new System.Drawing.Size(320, 590);
+            this.listViewNormal.Size = new System.Drawing.Size(319, 590);
             this.listViewNormal.TabIndex = 7;
             this.listViewNormal.UseCompatibleStateImageBehavior = false;
             this.listViewNormal.VirtualMode = true;
             this.listViewNormal.ListViewDragDrop += new DragNDrop.DragAndDropListView.DragDropHandle(this.listViewNormal_ListViewDragDrop);
             this.listViewNormal.ItemActivate += new System.EventHandler(this.listView_ItemActivate);
+            this.listViewNormal.ItemSelectionChanged += new System.Windows.Forms.ListViewItemSelectionChangedEventHandler(this.listView_ItemSelectionChanged);
             this.listViewNormal.RetrieveVirtualItem += new System.Windows.Forms.RetrieveVirtualItemEventHandler(this.listViewNormal_RetrieveVirtualItem);
             // 
             // listViewFav
@@ -276,9 +279,9 @@ namespace varManager
             this.listViewFav.HideSelection = false;
             this.listViewFav.LargeImageList = this.imageListScenes;
             this.listViewFav.LineColor = System.Drawing.Color.Red;
-            this.listViewFav.Location = new System.Drawing.Point(766, 43);
+            this.listViewFav.Location = new System.Drawing.Point(763, 43);
             this.listViewFav.Name = "listViewFav";
-            this.listViewFav.Size = new System.Drawing.Size(320, 590);
+            this.listViewFav.Size = new System.Drawing.Size(319, 590);
             this.listViewFav.TabIndex = 7;
             this.listViewFav.UseCompatibleStateImageBehavior = false;
             this.listViewFav.VirtualMode = true;
@@ -291,15 +294,15 @@ namespace varManager
             this.panel3.Controls.Add(this.buttonNormal);
             this.panel3.Controls.Add(this.labelNormal);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(385, 3);
+            this.panel3.Location = new System.Drawing.Point(383, 3);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(320, 34);
+            this.panel3.Size = new System.Drawing.Size(319, 34);
             this.panel3.TabIndex = 10;
             // 
             // buttonNormal
             // 
             this.buttonNormal.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.buttonNormal.Location = new System.Drawing.Point(94, 5);
+            this.buttonNormal.Location = new System.Drawing.Point(93, 5);
             this.buttonNormal.Name = "buttonNormal";
             this.buttonNormal.Size = new System.Drawing.Size(91, 26);
             this.buttonNormal.TabIndex = 0;
@@ -311,7 +314,7 @@ namespace varManager
             // 
             this.labelNormal.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelNormal.AutoSize = true;
-            this.labelNormal.Location = new System.Drawing.Point(191, 10);
+            this.labelNormal.Location = new System.Drawing.Point(190, 10);
             this.labelNormal.Name = "labelNormal";
             this.labelNormal.Size = new System.Drawing.Size(20, 21);
             this.labelNormal.TabIndex = 6;
@@ -322,15 +325,15 @@ namespace varManager
             this.panel4.Controls.Add(this.buttonFav);
             this.panel4.Controls.Add(this.labelFav);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(766, 3);
+            this.panel4.Location = new System.Drawing.Point(763, 3);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(320, 34);
+            this.panel4.Size = new System.Drawing.Size(319, 34);
             this.panel4.TabIndex = 10;
             // 
             // buttonFav
             // 
             this.buttonFav.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.buttonFav.Location = new System.Drawing.Point(226, 5);
+            this.buttonFav.Location = new System.Drawing.Point(225, 5);
             this.buttonFav.Name = "buttonFav";
             this.buttonFav.Size = new System.Drawing.Size(91, 26);
             this.buttonFav.TabIndex = 0;
@@ -342,7 +345,7 @@ namespace varManager
             // 
             this.labelFav.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.labelFav.AutoSize = true;
-            this.labelFav.Location = new System.Drawing.Point(179, 10);
+            this.labelFav.Location = new System.Drawing.Point(178, 10);
             this.labelFav.Name = "labelFav";
             this.labelFav.Size = new System.Drawing.Size(20, 21);
             this.labelFav.TabIndex = 6;
@@ -355,7 +358,7 @@ namespace varManager
             this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel7.Location = new System.Drawing.Point(3, 3);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(321, 34);
+            this.panel7.Size = new System.Drawing.Size(319, 34);
             this.panel7.TabIndex = 10;
             // 
             // buttonHide
@@ -389,10 +392,10 @@ namespace varManager
             this.flowLayoutPanel1.Controls.Add(this.groupBox6);
             this.flowLayoutPanel1.Controls.Add(this.groupBox7);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(1092, 3);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(1088, 3);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.tableLayoutPanel1.SetRowSpan(this.flowLayoutPanel1, 2);
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(229, 630);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(233, 630);
             this.flowLayoutPanel1.TabIndex = 8;
             // 
             // groupBox3
@@ -615,6 +618,28 @@ namespace varManager
             this.buttonResetFilter.Text = "Reset Filter";
             this.buttonResetFilter.UseVisualStyleBackColor = true;
             this.buttonResetFilter.Click += new System.EventHandler(this.buttonResetFilter_Click);
+            // 
+            // groupBox7
+            // 
+            this.groupBox7.Controls.Add(this.checkBox2);
+            this.groupBox7.Controls.Add(this.checkBox1);
+            this.groupBox7.Controls.Add(this.button1);
+            this.groupBox7.Location = new System.Drawing.Point(3, 506);
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.Size = new System.Drawing.Size(170, 91);
+            this.groupBox7.TabIndex = 2;
+            this.groupBox7.TabStop = false;
+            this.groupBox7.Text = "Shortcuts";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(6, 28);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "Load";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // buttonLoadscene
             // 
@@ -928,25 +953,25 @@ namespace varManager
             // 
             this.varsTableAdapter.ClearBeforeFill = true;
             // 
-            // groupBox7
+            // checkBox1
             // 
-            this.groupBox7.Controls.Add(this.button1);
-            this.groupBox7.Location = new System.Drawing.Point(3, 506);
-            this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(170, 91);
-            this.groupBox7.TabIndex = 2;
-            this.groupBox7.TabStop = false;
-            this.groupBox7.Text = "Shortcuts";
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(7, 60);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(85, 25);
+            this.checkBox1.TabIndex = 1;
+            this.checkBox1.Text = "Merge";
+            this.checkBox1.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // checkBox2
             // 
-            this.button1.Location = new System.Drawing.Point(6, 28);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Manage Package";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Location = new System.Drawing.Point(60, 60);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(143, 25);
+            this.checkBox2.TabIndex = 2;
+            this.checkBox2.Text = "IgnoreGender";
+            this.checkBox2.UseVisualStyleBackColor = true;
             // 
             // FormScenes
             // 
@@ -980,6 +1005,8 @@ namespace varManager
             this.groupBox4.PerformLayout();
             this.groupBox5.ResumeLayout(false);
             this.groupBox6.ResumeLayout(false);
+            this.groupBox7.ResumeLayout(false);
+            this.groupBox7.PerformLayout();
             this.panelImage.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
@@ -988,7 +1015,6 @@ namespace varManager
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPreview)).EndInit();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.varManagerDataSet)).EndInit();
-            this.groupBox7.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1067,5 +1093,7 @@ namespace varManager
         private System.Windows.Forms.Button buttonClearCache;
         private System.Windows.Forms.GroupBox groupBox7;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.CheckBox checkBox1;
     }
 }
